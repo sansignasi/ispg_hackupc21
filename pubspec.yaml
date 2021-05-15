@@ -49,15 +49,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/elon_faces/happy.jpg
-    - assets/elon_faces/happy.png
-    - assets/elon_faces/nah.jpg
-    - assets/elon_faces/skeptical.jpg
-    - assets/elon_faces/tears.jpg
-    - assets/elon_faces/moon.png
-    - assets/1.png
-    - assets/2.png
-    - assets/3.png
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
