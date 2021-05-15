@@ -43,7 +43,7 @@ class _BodyState extends State<Body> {
       tokenSecret: accessTokenSecret
   );
 
-  Future searchTweets(String query) async {
+  Future<List> searchTweets(String query) async {
     setState(() {
       isLoading = true;
     });
@@ -69,8 +69,6 @@ class _BodyState extends State<Body> {
     List<tweet> tweetList = new List();//list to hold all tweets
     // Convert the string response into something more useable
     var tweets = json.decode(res.body);//decode the response from the API
-    print("hola");
-    print(tweets);
 
     for (int i = 0; i < tweets['statuses'].length; i++) { //look through every collected tweet
       var idValue = tweets['statuses'][i]['full_text']; //Full text of the tweet
@@ -103,6 +101,15 @@ class _BodyState extends State<Body> {
       tweetList.add(
           curTweet); //all tweet data collect add to list to display in next pager
     }
+    return tweetList;
+  }
+
+  void getElonClass(tweetList){
+    int suma = 0;
+    for (int i=0; i<tweetList.length(); ++i){
+      suma += tweetList[i].get_value();
+    }
+    print(suma);
   }
 
   @override
