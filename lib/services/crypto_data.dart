@@ -14,7 +14,6 @@ class CoinData {
     if (response.statusCode == 200) {
       var decodedData = jsonDecode(response.body);
       var dogePrice = decodedData["dogecoin"]["usd"];
-      print("${response.body.toString()}");
       return dogePrice;
     } else {
       print(response.statusCode);
