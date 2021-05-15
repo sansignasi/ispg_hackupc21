@@ -5,6 +5,7 @@ import 'package:twitter_api/twitter_api.dart'; //used for sentiment analysis
 
 
 void main() => runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
   home: Home(),
 ));
 
@@ -14,9 +15,9 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dogecoin HyPredict', style: TextStyle(fontSize: 30)),
+        title: Text('Dogecoin HypePredict', style: TextStyle(fontSize: 30)),
         centerTitle: true,
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.pink,
       ),
       body: Body(),
     );

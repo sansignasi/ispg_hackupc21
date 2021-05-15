@@ -15,7 +15,7 @@ class TransactionFuture extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 20.0),
         child: Align(
           alignment: Alignment.bottomCenter,
-          child: Text("HYPE LEVEL: \$$hypeLevel\n\nDOGE PRICE: \$$displayPrice",
+          child: Text("HYPE LEVEL: ${hypeLevel}/5\n\nDOGE PRICE: \$$displayPrice",
             style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20
