@@ -27,6 +27,9 @@ class tweet extends StatelessWidget {
       goodWordsVal.add(val);
     }
   }
+  int get_value(){
+    return value;
+  }
   //no longer factors search word into value(i.e childish Gambino -> childish = -2 which kept hurting the value or fuck is -6 so every search would aways be down 6 more that needed)
   int sumVals(){
     int sum =0;
