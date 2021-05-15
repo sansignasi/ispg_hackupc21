@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:ispghackupc21/services/crypto_data.dart';
 import 'package:ispghackupc21/transaction_future.dart';
@@ -17,6 +16,7 @@ class _BodyState extends State<Body> {
   double data;
   final sentiment = Sentiment();
   bool isLoading = false;
+  String hypeLevel = '3';
 
   void getData() async{
     try{
@@ -25,7 +25,8 @@ class _BodyState extends State<Body> {
         displayPrice = data.toString();
         print(displayPrice);
       });
-      searchTweets('Dogecoin');
+      List l = await searchTweets('Dogecoin');
+      getElonClass(l);
     }catch (e){
       print(e);
     }
@@ -106,9 +107,10 @@ class _BodyState extends State<Body> {
 
   void getElonClass(tweetList){
     int suma = 0;
-    for (int i=0; i<tweetList.length(); ++i){
+    for (int i=0; i<tweetList.length; ++i){
       suma += tweetList[i].get_value();
     }
+    hypeLevel = "2";
     print(suma);
   }
 
@@ -125,12 +127,12 @@ class _BodyState extends State<Body> {
       children: [
         Container(
           child: Image(
-            image: AssetImage('assets/3.png'),
+            image: AssetImage('assets/5.png'),
           ),
           height: 400,
           margin: const EdgeInsets.only(top: 15),
         ),
-        Expanded(child: TransactionFuture(displayPrice: displayPrice)),
+        Expanded(child: TransactionFuture(displayPrice: displayPrice, hypeLevel: hypeLevel,)),
         Container(
           margin: const EdgeInsets.only(bottom: 15),
           child: Align(
