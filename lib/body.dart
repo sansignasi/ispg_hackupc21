@@ -118,8 +118,10 @@ class _BodyState extends State<Body> {
       children: [
         Container(
           child: Image(
-            image: AssetImage('assets/2.png'),
-          )
+            image: AssetImage('assets/3.png'),
+          ),
+          height: 400,
+          margin: const EdgeInsets.only(top: 15),
         ),
         Expanded(child: TransactionFuture(displayPrice: displayPrice)),
         Container(
