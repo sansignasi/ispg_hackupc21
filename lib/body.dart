@@ -27,6 +27,7 @@ class _BodyState extends State<Body> {
       });
       List l = await searchTweets('Dogecoin');
       getElonClass(l);
+      setImage();
     }catch (e){
       print(e);
     }
@@ -114,6 +115,18 @@ class _BodyState extends State<Body> {
     print(suma);
   }
 
+  String setImage() {
+    if(hypeLevel == '1') {
+      return "assets/1.png";
+    } else if(hypeLevel == '2') {
+      return "assets/2.png";
+    } else if(hypeLevel == '3') {
+      return "assets/3.png";
+    } else if(hypeLevel == '4') {
+      return "assets/4.png";
+    } else return "assets/5.png";
+  }
+
   @override
   void initState(){
     super.initState();
@@ -127,7 +140,7 @@ class _BodyState extends State<Body> {
       children: [
         Container(
           child: Image(
-            image: AssetImage('assets/5.png'),
+            image: AssetImage(setImage()),
           ),
           height: 400,
           margin: const EdgeInsets.only(top: 15),
