@@ -34,6 +34,11 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return displayPrice.isNotEmpty ? Column(
       children: [
+        Container(
+          child: Image(
+            image: AssetImage('assets/1.png'),
+          )
+        ),
         Expanded(child: TransactionFuture(displayPrice: displayPrice)),
         Container(
           margin: const EdgeInsets.only(bottom: 15),

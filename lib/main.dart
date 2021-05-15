@@ -6,7 +6,7 @@ import 'package:sentiment_dart/sentiment_dart.dart'; //used for sentiment analys
 void main() => runApp(MaterialApp(
   home: Home(),
 ));
-
+/*
   static String consumerApiKey = "QxGBbMkqvT29TlZs3LM2gsChf";
   static String consumerApiSecret = "ZnNZB5mWPT2MJ7yna5H7AiwJMUmwuuuOywLtZ9vcAoebDEmRHm";
   static String accessToken = "585185817-oEm0MCrRF6LnxYSOvWm9JmKAsb436Pf3mcrECnIG";
@@ -70,7 +70,7 @@ void main() => runApp(MaterialApp(
     }
     tweetList.add(curTweet);//all tweet data collect add to list to display in next pager
   }
-
+*/
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
